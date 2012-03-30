@@ -1,0 +1,20 @@
+<?php
+	require_once './php-github-lib/Github/Autoloader.php';
+    Github_Autoloader::register();
+	$github = new Github_Client();
+	$github->authenticate('','',Github_Client::AUTH_HTTP_PASSWORD);
+	$users = $github->getUserApi()->search('stigliew');
+	var_dump($users);
+	echo '<hr/>';
+	$emails = $github->getUserApi()->getEmails();
+	var_dump($emails);
+	echo '<hr/>';
+	$users = $github->getUserApi()->getFollowing('stigliew');
+	var_dump($users);
+	echo '<hr/>';
+	$issues = $github->getIssueApi()->getList('stigliew', 'weixiaoyuan-iOS-client', 'open');
+	var_dump($issues);
+	echo '<hr/>';
+	$gists = $github->getGistApi()->getList('stigliew');
+	var_dump($gists);
+	//$github->getIssueApi()->open('stigliew', 'weixiaoyuan-iOS-client', 'The issue title', 'The issue body');
