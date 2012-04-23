@@ -30,6 +30,8 @@ class Github_Client
      * with username and token via HTTP Authentication.
      */
     const AUTH_HTTP_TOKEN = 'http_token';
+	
+	const AUTH_OAUTH_TOKEN = 'OAuth_token';
 
     /**
      * The httpClient instance used to communicate with GitHub

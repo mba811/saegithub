@@ -1,4 +1,13 @@
 ---
 name: saegithub
 version: 1
+cron:
+    - description: github-issue cron
+	  url: githubXweibo/G2W.php
+	  schedule: every 10 mins
+	  timezone: Beijing
+    - description: github-act cron
+	  url: githubXweibo/W2G.php
+	  schedule: every 10 mins
+	  timezone: Beijing
 ...

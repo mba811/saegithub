@@ -24,6 +24,13 @@ class Github_HttpClient_Curl extends Github_HttpClient
 
         if ($options['login']) {
             switch ($options['auth_method']) {
+			
+			    case Github_Client::AUTH_OAUTH_TOKEN:
+					$parameters += array(
+                        "access_token" => $options['secret'],
+                    );
+                    
+                    break;
                 case Github_Client::AUTH_HTTP_PASSWORD:
                     $curlOptions += array(
                         CURLOPT_USERPWD => $options['login'].':'.$options['secret'],
