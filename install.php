@@ -32,7 +32,7 @@ $aurl = $o->getAuthorizeURL( $keys['oauth_token'] ,false , 'https://' . $_SERVER
 <ul>
 	<li><h3>步骤1：</h3>
 		<p>请在 <a href="http://sae.sina.com.cn/?m=taskqueue&app_id=<?php echo $_SERVER['HTTP_APPNAME'];?>&ver=1" target="blank">TaskQueue</a>中新建名为"W2G"和"G2W"两个并发队列，参数随喜好。</p>
-		<p>请在 <a href="http://sae.sina.com.cn/?m=vermng&a=sdk&app_id=<?php echo $_SERVER['HTTP_APPNAME'];?>&version=1" target="blank">代码编辑器</a> 中把第五行方括号内文字删掉并且保存，以让CRON即时生效。</p>
+		<p>请在 <a href="http://sae.sina.com.cn/?m=vermng&a=sdk&app_id=<?php echo $_SERVER['HTTP_APPNAME'];?>&version=1" target="blank">代码编辑器</a> 中把config.yaml第五行方括号内文字删掉并且<strong>保存</strong>，以让CRON即时生效。</p>
 		<p></p>
 	</li>
 	<li><h3>步骤2,绑定新浪微博和Github的API：</h3><form method="get">

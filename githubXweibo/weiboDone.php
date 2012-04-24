@@ -98,7 +98,7 @@ if($ot!='' && $ots!='')
 			</tr>
 			<tr><td>
 			</td><td>
-			<a href="https://github.com/login/oauth/authorize?client_id=4550f0bc2f163c92e50a&redirect_uri=<?php echo $githubcallbackurl;?>&scope=user,public_repo">重新获取Token</a>
+			<a href="https://github.com/login/oauth/authorize?client_id=<?php echo GH_client_id;?>&redirect_uri=<?php echo $githubcallbackurl;?>&scope=user,public_repo">重新获取Token</a>
 			</td></tr>
 			<tr><td>
 			LMC:</td><td><input type="text" name="lmc" value="<?php echo $lmc;?>" />
@@ -176,9 +176,6 @@ if($ot!='' && $ots!='')
 				echo '<hr/>';
 				$users = $github->getUserApi()->getFollowing($ghu);
 				var_dump($users);
-				echo '<hr/>';
-				$issues = $github->getIssueApi()->getList($ghu, 'weixiaoyuan-iOS-client', 'open');
-				var_dump($issues);
 			}
 		
 		}
