@@ -34,8 +34,8 @@ if(false && trim($uid)==''){
         	"git@stigliew.com" ,
         	"[saegithub][微博连接失败]" ,
        		print_r($uid_get,true),
-       		"stig.gv@gmail.com" ,
-       		"q33ny5bcd3a" 
+       		"" ,
+       		"" 
     	);
 
     	$mail->clean(); 
