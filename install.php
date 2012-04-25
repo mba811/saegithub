@@ -27,6 +27,7 @@ include_once( 'saet.ex.class.php' );
 $o = new SaeTOAuth( $aky , $sky  );
 $keys = $o->getRequestToken();
 $aurl = $o->getAuthorizeURL( $keys['oauth_token'] ,false , 'https://' . $_SERVER['HTTP_APPNAME'] . '.sinaapp.com/githubXweibo/weiboDone.php?ot='.$keys['oauth_token'].'&ots='.$keys['oauth_token_secret'] );
+$githubcallbackurl='https://' . $_SERVER['HTTP_APPNAME'] . '.sinaapp.com/githubXweibo/githubcallback.php';
 ?>
 安装SAEGithub：<hr />
 <ul>
@@ -38,6 +39,9 @@ $aurl = $o->getAuthorizeURL( $keys['oauth_token'] ,false , 'https://' . $_SERVER
 	<li><h3>步骤2,绑定新浪微博和Github的API：</h3><form method="get">
 			<a href="http://open.weibo.com/development" target="blank">微博应用申请传送门</a><br />
 			<a href="https://github.com/settings/applications/new" target="blank">Github API申请传送门</a><br />
+			<p>URL处填写: http://<?php echo $_SERVER['HTTP_APPNAME'];?>.sinaapp.com/</p>
+			<p>Github Callback URL处填写: <?php echo $githubcallbackurl;?></p>
+			
 			微博appkey:<input type="text" name="AKY" value="<?php echo $aky;?>" /><br />
 			微博appkey secret:<input type="text" name="SKY" value="<?php echo $sky;?>" /><br />
 			Github Client ID:<input type="text" name="CID" value="<?php echo $cid;?>" /><br />

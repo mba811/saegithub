@@ -76,6 +76,7 @@ if($ot!='' && $ots!='')
 		$ghu = $kv->get(KVDB_PERFIX.''.$user['id'].'_GHU');
 		$ght = $kv->get(KVDB_PERFIX.''.$user['id'].'_GHT');
 		$lmc = $kv->get(KVDB_PERFIX.''.$user['id'].'_LMC');
+		if(trim($lmc)=='')$lmc='0';
 		if($ghu === false){
 			echo '未绑定github帐号，可以绑定:';
 		}else{
